@@ -1,0 +1,49 @@
+body {
+    align-items: center;
+    background-color: #000;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    margin: 0;
+}
+
+.hover-me {
+    background-color: #000;
+    border: 1px solid #1a9cc5;
+    color: #1a9cc5;
+    cursor: pointer;
+    padding: 1.25rem 4.5rem;
+    position: relative;
+    top: 0;
+    transition: 0.25s ease-in;
+}
+
+.hover-me_text {
+    font-size: 0.875rem;
+    font-family: "VT323", monospace;
+    letter-spacing: 0.125rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.hover-me::after {
+    background-image: linear-gradient(0deg, #1a9cc5 12.5%, transparent 12.5%, transparent 50%, #1a9cc5 50%, #1a9cc5 62.5%, transparent 62.5%, transparent 100%);
+    background-size: 8px 8px;
+    bottom: -9px;
+    clip-path: polygon(0 0, 100% 0, 85% 50%, 15% 50%);
+    content: "";
+    height: 25px;
+    left: 0;
+    transition: 0.25s ease-in;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.hover-me:hover {
+    top: -1rem;
+}
+
+.hover-me_text:hover::after {
+    bottom: -1.625rem;
+}
